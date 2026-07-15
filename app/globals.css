@@ -518,11 +518,25 @@ body {
    COMPREHENSIVE MOBILE RESPONSIVE SYSTEM
    ============================================================ */
 
-/* Navigation helpers */
-@media (min-width: 768px) {
+/* Navigation and Badge helpers */
+@media (min-width: 1150px) {
   .hero-floating-badges-desktop { display: block !important; }
   .hero-floating-badges-mobile { display: none !important; }
 }
+@media (max-width: 1149px) {
+  .hero-floating-badges-desktop { display: none !important; }
+  .hero-floating-badges-mobile {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+    padding: 0 16px;
+  }
+}
+
 
 /* Fix: Navbar overlap — ensure hero section top never hides under fixed navbar */
 @media (max-width: 767px) {
@@ -711,8 +725,6 @@ body {
   .desktop-nav-links { display: flex !important; }
   .desktop-nav-cta { display: block !important; }
   .hamburger-btn { display: none !important; }
-  .hero-floating-badges-desktop { display: block !important; }
-  .hero-floating-badges-mobile { display: none !important; }
 }
 
 /* ============================================================
@@ -726,8 +738,6 @@ body {
   .desktop-nav-links { display: flex !important; }
   .desktop-nav-cta { display: block !important; }
   .hamburger-btn { display: none !important; }
-  .hero-floating-badges-desktop { display: block !important; }
-  .hero-floating-badges-mobile { display: none !important; }
   .platform-features-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
   }
@@ -736,7 +746,7 @@ body {
   }
 }
 
-/* Responsive Floating Badges to prevent screen edge clipping on laptops */
+/* Responsive Floating Badges: sit beautifully on sides of the 960px mockup */
 .hero-badge-left-1 {
   position: absolute;
   left: -150px;
@@ -753,32 +763,34 @@ body {
 }
 .hero-badge-left-2 {
   position: absolute;
-  left: -170px;
+  left: -175px;
   top: 230px;
   transform: translate3d(0, 0, 90px);
   transition: left 0.3s ease;
 }
 .hero-badge-right-2 {
   position: absolute;
-  right: -170px;
+  right: -175px;
   top: 290px;
   transform: translate3d(0, 0, 110px);
   transition: right 0.3s ease;
 }
 
-@media (max-width: 1380px) {
+/* Medium Laptop Screens (1150px to 1380px): Sit safely in the side margins without overlapping dashboard text */
+@media (max-width: 1380px) and (min-width: 1150px) {
   .hero-badge-left-1 {
-    left: -40px !important;
+    left: -90px !important;
   }
   .hero-badge-right-1 {
-    right: -40px !important;
+    right: -90px !important;
   }
   .hero-badge-left-2 {
-    left: -50px !important;
+    left: -100px !important;
   }
   .hero-badge-right-2 {
-    right: -50px !important;
+    right: -100px !important;
   }
 }
+
 
 
