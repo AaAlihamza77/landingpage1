@@ -26,12 +26,12 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "AutoXverse AI | Dental Clinic Operating System",
+  title: "AutoXverse | Dental Clinic Operating System",
   description:
     "Help your dental clinic recover revenue, reduce no-shows, retain more patients, and make every enquiry count.",
   metadataBase: new URL("https://autoxverse.ai"),
   openGraph: {
-    title: "AutoXverse AI | Dental Clinic Operating System",
+    title: "AutoXverse | Dental Clinic Operating System",
     description: "More bookings, fewer no-shows, and better patient retention for modern dental clinics.",
     type: "website",
   },
