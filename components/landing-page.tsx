@@ -661,12 +661,15 @@ function Outcomes() {
               strokeDasharray="6,6"
             />
             {/* Glowing Flow Thread */}
-            <path
+            <motion.path
               d="M -50 200 C 75 60, 225 60, 300 200 C 375 340, 525 340, 600 200 C 675 60, 825 60, 900 200 C 975 340, 1125 340, 1250 200"
               stroke="url(#thread-flow-glow)"
               strokeWidth="3"
               strokeLinecap="round"
-              className="thread-flow-path"
+              initial={{ pathLength: 0 }}
+              whileInView={{ pathLength: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.8, ease: "easeOut" }}
             />
             <defs>
               <linearGradient id="thread-flow-glow" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -679,28 +682,36 @@ function Outcomes() {
           </svg>
 
           {/* Circles (Balls) Placed Exactly on the Wave Coordinates */}
-          {stats.map(item => (
-            <div key={item.label} className="stats-ball-c" style={{
-              position: "absolute",
-              left: item.left,
-              top: item.top,
-              width: 155,
-              height: 155,
-              borderRadius: "50%",
-              background: "rgba(11, 13, 25, 0.82)",
-              border: "2px solid rgba(173, 187, 218, 0.15)",
-              boxShadow: `0 12px 35px rgba(5, 7, 15, 0.75), inset 0 1px 0 rgba(255,255,255,0.06), 0 0 15px ${item.color}15`,
-              transform: "translate(-50%, -50%)",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: 16,
-              zIndex: 2,
-              cursor: "pointer",
-              "--hover-color": item.color,
-              "--glow-color": `${item.color}45`
-            } as React.CSSProperties}>
+          {stats.map((item, idx) => (
+            <motion.div
+              key={item.label}
+              className="stats-ball-c"
+              initial={{ opacity: 0, scale: 0.4, y: 30 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: idx * 0.18, duration: 0.65, type: "spring", stiffness: 90 }}
+              style={{
+                position: "absolute",
+                left: item.left,
+                top: item.top,
+                width: 155,
+                height: 155,
+                borderRadius: "50%",
+                background: "rgba(11, 13, 25, 0.82)",
+                border: "2px solid rgba(173, 187, 218, 0.15)",
+                boxShadow: `0 12px 35px rgba(5, 7, 15, 0.75), inset 0 1px 0 rgba(255,255,255,0.06), 0 0 15px ${item.color}15`,
+                transform: "translate(-50%, -50%)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: 16,
+                zIndex: 2,
+                cursor: "pointer",
+                "--hover-color": item.color,
+                "--glow-color": `${item.color}45`
+              } as React.CSSProperties}
+            >
               
               {/* Stat Value */}
               <div style={{
@@ -726,7 +737,7 @@ function Outcomes() {
                 lineHeight: 1.3,
                 maxWidth: 120
               }}>{item.label}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -736,7 +747,18 @@ function Outcomes() {
           <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", top: 0, bottom: 0, width: 30, zIndex: 0 }}>
             <svg width="30" height="100%" style={{ position: "absolute", inset: 0 }} fill="none" preserveAspectRatio="none">
               <line x1="15" y1="0" x2="15" y2="100%" stroke="rgba(112, 145, 230, 0.12)" strokeWidth="2" strokeDasharray="4 4" />
-              <line x1="15" y1="0" x2="15" y2="100%" stroke="url(#mobile-vertical-flow-glow)" strokeWidth="3" className="vertical-thread-path" />
+              <motion.line
+                x1="15"
+                y1="0"
+                x2="15"
+                y2="100%"
+                stroke="url(#mobile-vertical-flow-glow)"
+                strokeWidth="3"
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 1.6, ease: "easeOut" }}
+              />
               <defs>
                 <linearGradient id="mobile-vertical-flow-glow" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="#06B6D4" />
@@ -749,26 +771,34 @@ function Outcomes() {
           </div>
 
           {/* Circles (Balls) stacked vertically */}
-          {stats.map(item => (
-            <div key={item.label} className="stats-ball-c-mobile" style={{
-              position: "relative",
-              width: 155,
-              height: 155,
-              borderRadius: "50%",
-              background: "rgba(11, 13, 25, 0.82)",
-              border: "2px solid rgba(173, 187, 218, 0.15)",
-              boxShadow: `0 12px 35px rgba(5, 7, 15, 0.75), inset 0 1px 0 rgba(255,255,255,0.06), 0 0 15px ${item.color}15`,
-              margin: "20px 0",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: 16,
-              zIndex: 2,
-              cursor: "pointer",
-              "--hover-color": item.color,
-              "--glow-color": `${item.color}45`
-            } as React.CSSProperties}>
+          {stats.map((item, idx) => (
+            <motion.div
+              key={item.label}
+              className="stats-ball-c-mobile"
+              initial={{ opacity: 0, scale: 0.4, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: idx * 0.15, duration: 0.5, type: "spring", stiffness: 90 }}
+              style={{
+                position: "relative",
+                width: 155,
+                height: 155,
+                borderRadius: "50%",
+                background: "rgba(11, 13, 25, 0.82)",
+                border: "2px solid rgba(173, 187, 218, 0.15)",
+                boxShadow: `0 12px 35px rgba(5, 7, 15, 0.75), inset 0 1px 0 rgba(255,255,255,0.06), 0 0 15px ${item.color}15`,
+                margin: "20px 0",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: 16,
+                zIndex: 2,
+                cursor: "pointer",
+                "--hover-color": item.color,
+                "--glow-color": `${item.color}45`
+              } as React.CSSProperties}
+            >
               
               {/* Stat Value */}
               <div style={{
@@ -794,7 +824,7 @@ function Outcomes() {
                 lineHeight: 1.3,
                 maxWidth: 120
               }}>{item.label}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
