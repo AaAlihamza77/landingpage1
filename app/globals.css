@@ -776,19 +776,18 @@ body {
   transition: right 0.3s ease;
 }
 
-/* Medium Laptop Screens (1150px to 1380px): Sit safely in the side margins without overlapping dashboard text */
 @media (max-width: 1380px) and (min-width: 1150px) {
   .hero-badge-left-1 {
     left: -140px !important;
   }
   .hero-badge-right-1 {
-    right: -95px !important;
+    right: -140px !important;
   }
   .hero-badge-left-2 {
     left: -150px !important;
   }
   .hero-badge-right-2 {
-    right: -105px !important;
+    right: -150px !important;
   }
 }
 
