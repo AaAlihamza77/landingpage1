@@ -668,7 +668,7 @@ function Outcomes() {
               strokeLinecap="round"
               initial={{ pathLength: 0 }}
               whileInView={{ pathLength: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 1.8, ease: "easeOut" }}
             />
             <defs>
@@ -688,7 +688,7 @@ function Outcomes() {
               className="stats-ball-c"
               initial={{ opacity: 0, scale: 0.4, y: 30 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ delay: idx * 0.18, duration: 0.65, type: "spring", stiffness: 90 }}
               style={{
                 position: "absolute",
@@ -756,7 +756,7 @@ function Outcomes() {
                 strokeWidth="3"
                 initial={{ pathLength: 0 }}
                 whileInView={{ pathLength: 1 }}
-                viewport={{ once: true, amount: 0.1 }}
+                viewport={{ once: false, amount: 0.1 }}
                 transition={{ duration: 1.6, ease: "easeOut" }}
               />
               <defs>
@@ -777,7 +777,7 @@ function Outcomes() {
               className="stats-ball-c-mobile"
               initial={{ opacity: 0, scale: 0.4, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: false, amount: 0.15 }}
               transition={{ delay: idx * 0.15, duration: 0.5, type: "spring", stiffness: 90 }}
               style={{
                 position: "relative",
@@ -828,7 +828,7 @@ function Outcomes() {
           ))}
         </div>
 
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", marginTop: 72 }}>
           <CTAButton>See What Your Clinic Could Recover</CTAButton>
         </div>
       </div>
