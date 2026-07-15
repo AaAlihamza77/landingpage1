@@ -1150,7 +1150,7 @@ function RoiCalculator() {
         <div className="roi-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", borderRadius: 20, overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)" }}>
           
           {/* Sliders Input Panel */}
-          <div style={{ padding: "40px 32px", background: "rgba(13,20,33,0.9)", display: "flex", flexDirection: "column", gap: 24, justifyStyle: "stretch" }}>
+          <div style={{ padding: "40px 32px", background: "rgba(13,20,33,0.9)", display: "flex", flexDirection: "column", gap: 24 }}>
             <div>
               <h3 style={{ fontFamily: Fh, fontWeight: 400, fontSize: 26, color: "#fff", marginBottom: 8, lineHeight: 1.1 }}>What could your clinic recover?</h3>
               <p style={{ ...S.bodySm(), marginBottom: 8 }}>Drag the handles to test different clinical scales and values.</p>
