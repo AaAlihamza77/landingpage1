@@ -300,7 +300,7 @@ function Navbar() {
    ============================================================ */
 function Hero() {
   return (
-    <section id="top" style={{ position: "relative", background: C.bg, paddingTop: 140, paddingBottom: 80, overflow: "hidden" }}>
+    <section id="top" style={{ position: "relative", background: C.bg, paddingTop: 160, paddingBottom: 80, overflow: "hidden" }}>
       {/* Gradient orbs */}
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none",
         background: "radial-gradient(ellipse 60% 60% at 20% 40%, rgba(112,145,230,0.13) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 80% 30%, rgba(61,82,160,0.1) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 50% 80%, rgba(173,187,218,0.08) 0%, transparent 70%)" }} />

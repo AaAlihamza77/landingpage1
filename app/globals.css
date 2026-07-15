@@ -524,6 +524,18 @@ body {
   .hero-floating-badges-mobile { display: none !important; }
 }
 
+/* Fix: Navbar overlap — ensure hero section top never hides under fixed navbar */
+@media (max-width: 767px) {
+  #top {
+    padding-top: 100px !important;
+  }
+  /* Make navbar background fully opaque on mobile so no content bleeds through */
+  header > div {
+    background: rgba(11, 13, 25, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+  }
+}
+
 /* Responsive Two-col Grids */
 .responsive-two-col {
   display: grid;
