@@ -746,7 +746,18 @@ body {
   }
 }
 
-/* Responsive Floating Badges: sit beautifully on sides of the 960px mockup */
+/* Responsive dashboard wrapper styling */
+.hero-mockup-wrapper {
+  width: 100%;
+  max-width: 960px;
+}
+@media (max-width: 1380px) and (min-width: 1150px) {
+  .hero-mockup-wrapper {
+    max-width: 820px !important;
+  }
+}
+
+/* Responsive Floating Badges: sit beautifully on sides of the mockup */
 .hero-badge-left-1 {
   position: absolute;
   left: -170px;
@@ -782,12 +793,12 @@ body {
     left: -125px !important;
   }
   .hero-badge-right-1 {
-    right: -170px !important;
+    right: -130px !important;
   }
   .hero-badge-left-2 {
     left: -130px !important;
   }
   .hero-badge-right-2 {
-    right: -180px !important;
+    right: -140px !important;
   }
 }

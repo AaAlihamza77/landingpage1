@@ -393,7 +393,7 @@ function HeroDashboardMock() {
   );
 
   return (
-    <div className="hero-mockup-wrapper" style={{ position: "relative", marginTop: 72, maxWidth: 960, margin: "72px auto 0", perspective: "1500px", transformStyle: "preserve-3d" }}>
+    <div className="hero-mockup-wrapper" style={{ position: "relative", marginTop: 72, margin: "72px auto 0", perspective: "1500px", transformStyle: "preserve-3d" }}>
       
       {/* Dashboard card container */}
       <div className="hero-mockup-container" style={{ borderRadius: 20, overflow: "hidden", background: "rgba(21, 25, 46, 0.65)", border: "1px solid rgba(173, 187, 218, 0.16)", backdropFilter: "blur(24px)", transform: "rotateX(10deg) rotateY(-4deg) rotateZ(1deg)", transformStyle: "preserve-3d", boxShadow: "0 40px 100px -10px rgba(7, 9, 17, 0.85), 0 20px 50px -15px rgba(112, 145, 230, 0.25)" }}>
