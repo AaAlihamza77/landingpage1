@@ -736,3 +736,49 @@ body {
   }
 }
 
+/* Responsive Floating Badges to prevent screen edge clipping on laptops */
+.hero-badge-left-1 {
+  position: absolute;
+  left: -150px;
+  top: 60px;
+  transform: translate3d(0, 0, 100px);
+  transition: left 0.3s ease;
+}
+.hero-badge-right-1 {
+  position: absolute;
+  right: -150px;
+  top: 130px;
+  transform: translate3d(0, 0, 120px);
+  transition: right 0.3s ease;
+}
+.hero-badge-left-2 {
+  position: absolute;
+  left: -170px;
+  top: 230px;
+  transform: translate3d(0, 0, 90px);
+  transition: left 0.3s ease;
+}
+.hero-badge-right-2 {
+  position: absolute;
+  right: -170px;
+  top: 290px;
+  transform: translate3d(0, 0, 110px);
+  transition: right 0.3s ease;
+}
+
+@media (max-width: 1380px) {
+  .hero-badge-left-1 {
+    left: -40px !important;
+  }
+  .hero-badge-right-1 {
+    right: -40px !important;
+  }
+  .hero-badge-left-2 {
+    left: -50px !important;
+  }
+  .hero-badge-right-2 {
+    right: -50px !important;
+  }
+}
+
+

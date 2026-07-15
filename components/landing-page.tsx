@@ -509,16 +509,16 @@ function HeroDashboardMock() {
 
       {/* DESKTOP VIEW: Absolute floating badges */}
       <div className="hero-floating-badges-desktop" style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 10, transformStyle: "preserve-3d" }}>
-        <div style={{ position: "absolute", left: -150, top: 60, transform: "translate3d(0, 0, 100px)" }}>
+        <div className="hero-badge-left-1">
           {badgeReminder}
         </div>
-        <div style={{ position: "absolute", right: -150, top: 130, transform: "translate3d(0, 0, 120px)" }}>
+        <div className="hero-badge-right-1">
           {badgeReview}
         </div>
-        <div style={{ position: "absolute", left: -170, top: 230, transform: "translate3d(0, 0, 90px)" }}>
+        <div className="hero-badge-left-2">
           {badgeLead}
         </div>
-        <div style={{ position: "absolute", right: -170, top: 290, transform: "translate3d(0, 0, 110px)" }}>
+        <div className="hero-badge-right-2">
           {badgeVoice}
         </div>
       </div>
