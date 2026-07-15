@@ -749,7 +749,7 @@ body {
 /* Responsive Floating Badges: sit beautifully on sides of the 960px mockup */
 .hero-badge-left-1 {
   position: absolute;
-  left: -150px;
+  left: -190px;
   top: 60px;
   transform: translate3d(0, 0, 100px);
   transition: left 0.3s ease;
@@ -763,7 +763,7 @@ body {
 }
 .hero-badge-left-2 {
   position: absolute;
-  left: -175px;
+  left: -200px;
   top: 230px;
   transform: translate3d(0, 0, 90px);
   transition: left 0.3s ease;
@@ -779,18 +779,19 @@ body {
 /* Medium Laptop Screens (1150px to 1380px): Sit safely in the side margins without overlapping dashboard text */
 @media (max-width: 1380px) and (min-width: 1150px) {
   .hero-badge-left-1 {
-    left: -90px !important;
+    left: -140px !important;
   }
   .hero-badge-right-1 {
-    right: -90px !important;
+    right: -95px !important;
   }
   .hero-badge-left-2 {
-    left: -100px !important;
+    left: -150px !important;
   }
   .hero-badge-right-2 {
-    right: -100px !important;
+    right: -105px !important;
   }
 }
+
 
 
 
