@@ -749,48 +749,45 @@ body {
 /* Responsive Floating Badges: sit beautifully on sides of the 960px mockup */
 .hero-badge-left-1 {
   position: absolute;
-  left: -190px;
+  left: -170px;
   top: 60px;
   transform: translate3d(0, 0, 100px);
   transition: left 0.3s ease;
 }
 .hero-badge-right-1 {
   position: absolute;
-  right: -150px;
+  right: -210px;
   top: 130px;
   transform: translate3d(0, 0, 120px);
   transition: right 0.3s ease;
 }
 .hero-badge-left-2 {
   position: absolute;
-  left: -200px;
+  left: -180px;
   top: 230px;
   transform: translate3d(0, 0, 90px);
   transition: left 0.3s ease;
 }
 .hero-badge-right-2 {
   position: absolute;
-  right: -175px;
+  right: -230px;
   top: 290px;
   transform: translate3d(0, 0, 110px);
   transition: right 0.3s ease;
 }
 
+/* Medium Laptop Screens (1150px to 1380px): Sit safely in the side margins with identical visual spacing */
 @media (max-width: 1380px) and (min-width: 1150px) {
   .hero-badge-left-1 {
-    left: -140px !important;
+    left: -125px !important;
   }
   .hero-badge-right-1 {
-    right: -140px !important;
+    right: -170px !important;
   }
   .hero-badge-left-2 {
-    left: -150px !important;
+    left: -130px !important;
   }
   .hero-badge-right-2 {
-    right: -150px !important;
+    right: -180px !important;
   }
 }
-
-
-
-
