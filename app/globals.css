@@ -70,6 +70,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -538,13 +539,17 @@ body {
 }
 
 
-/* Fix: Navbar overlap — ensure hero section top never hides under fixed navbar */
 @media (max-width: 767px) {
+  /* Make header scroll away on mobile instead of staying fixed and blocking content */
+  header {
+    position: absolute !important;
+    top: 16px !important;
+  }
   #top {
-    padding-top: 100px !important;
+    padding-top: 120px !important;
   }
   /* Make navbar background fully opaque on mobile so no content bleeds through */
-  header > div {
+  header > div > div {
     background: rgba(11, 13, 25, 0.98) !important;
     backdrop-filter: blur(20px) !important;
   }
